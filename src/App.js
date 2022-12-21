@@ -26,7 +26,7 @@ function App() {
     <BrowserRouter>
       <TopBar/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="home/*" element={<Home />} />
         <Route path="register/*" element={user ? <Home/> : <Register/>} />
         <Route path="setting/*" element={user ? <Setting/> : <Register/>}/>
         <Route path="write/*" element={user ? <Write/> : <Register/>} />
