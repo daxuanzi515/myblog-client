@@ -43,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://myblog-api-psi.vercel.app/api/"
+  "proxy": "https://myblog-api-psi.vercel.app:5000/api/"
 }
