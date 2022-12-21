@@ -5,7 +5,7 @@ export default function Posts({posts}) {
   return (
       <div className="posts">
         {
-    posts ?:
+    posts&&posts ?:
           (posts.map((c)=>(
           <Post post={c}/>
           )))
