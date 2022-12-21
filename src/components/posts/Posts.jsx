@@ -4,9 +4,13 @@ import "./posts.css"
 export default function Posts({posts}) {
   return (
       <div className="posts">
-        {posts.map((p)=>
-        (<Post post={p}/>)
-          )}
+        {
+    (posts && posts.length >0)?:
+          (posts.map((c)=>(
+          <Post post={c}/>
+          )))
+  :(<p>loading</p>)
+         }
       </div>
   )
 }
