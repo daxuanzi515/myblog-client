@@ -5,7 +5,7 @@ import "./sidebar.css"
 
 
 export default function Sidebar() {
-    const [cats,setCats] = useState([]);
+    const [cats,setCats] = useState({stage:[]});
     useEffect(()=>{
         const getCats = async () =>{
             const result = await axios.get("/categories");
@@ -30,13 +30,13 @@ export default function Sidebar() {
             <span className="sidebarTitle">CATEGORIES</span>
             <ul className="sidebarList">
                {
-                (cats && cats.length >0 )?
-                (cats.map((c)=>(
+                (cats && cats.stage)?
+                cats.map((c)=>(
                 <Link to={`/?cat={c.name}`} className="link">
                 <li className="sidebarListItem">{c.name}</li>
                 </Link>
-               ))):
-                (<p>loading ...</p>)
+               )):
+                (<></>)
                 }
             </ul>
         </div>
